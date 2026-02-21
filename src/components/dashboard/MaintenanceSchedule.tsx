@@ -1,8 +1,8 @@
-import { machines } from "@/data/sensorData";
+import { type Machine } from "@/data/sensorData";
 import { StatusBadge } from "./StatusBadge";
 import { Calendar } from "lucide-react";
 
-export function MaintenanceSchedule() {
+export function MaintenanceSchedule({ machines }: { machines: Machine[] }) {
   const sorted = [...machines].sort((a, b) => new Date(a.nextMaintenance).getTime() - new Date(b.nextMaintenance).getTime());
 
   return (
