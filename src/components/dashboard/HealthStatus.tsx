@@ -1,8 +1,8 @@
-import { machines } from "@/data/sensorData";
+import { type Machine } from "@/data/sensorData";
 import { StatusBadge } from "./StatusBadge";
 import { cn } from "@/lib/utils";
 
-export function HealthStatus() {
+export function HealthStatus({ machines }: { machines: Machine[] }) {
   return (
     <div className="rounded-lg border border-border bg-card p-5">
       <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
